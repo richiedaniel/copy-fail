@@ -1,8 +1,4 @@
 #!/usr/bin/env python3
-"""
-Recode minimal - struktur sama persis dengan original
-TAPI dengan formatting yang rapi
-"""
 
 import os
 import zlib
